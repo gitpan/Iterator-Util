@@ -8,14 +8,14 @@ Iterator::Util - Essential utilities for the Iterator class.
 
 =head1 VERSION
 
-This documentation describes version 0.01 of Iterator::Util, August 18, 2005.
+This documentation describes version 0.02 of Iterator::Util, August 23, 2005.
 
 =cut
 
 use strict;
 use warnings;
 package Iterator::Util;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use base 'Exporter';
 use vars qw/@EXPORT @EXPORT_OK %EXPORT_TAGS/;
@@ -614,7 +614,8 @@ assigned to C<$a> and C<$b> before invoking the code.
 The new iterator is exhausted when either C<$it_A> or C<$it_B> are
 exhausted.
 
-This function is analogous to the C<pairwise> function from List::MoreUtils.
+This function is analogous to the L<pairwise|List::MoreUtils/pairwise>
+function from L<List::MoreUtils>.
 
 I<Example:>
 
@@ -698,8 +699,8 @@ worry; these exception objects work just like C<$@> does with C<die>
 and C<croak>, but they are easier to work with if you are trapping
 errors.
 
-See the L<Iterator> module documentation for more information on
-trapping and handling these exceptions.
+See the L<Iterator|Iterator/DIAGNOSTICS> module documentation for more
+information on trapping and handling these exceptions.
 
 =over 4
 
@@ -718,8 +719,8 @@ what the problem was.
 
 Class: C<Iterator::X::Exhausted>
 
-You called C<value> on an iterator that is exhausted; that is, there
-are no more values in the sequence to return.
+You called C<value|Iterator/value> on an iterator that is exhausted;
+that is, there are no more values in the sequence to return.
 
 As a string, this exception is "Iterator is exhausted."
 
@@ -765,13 +766,13 @@ circumstances of the error.
 
 Requires the following additional modules:
 
- L<Iterator>
+L<Iterator>
 
 =head1 SEE ALSO
 
 I<Higher Order Perl>, Mark Jason Dominus, Morgan Kauffman 2005.
 
- L<http://perl.plover.com/hop/>
+L<http://perl.plover.com/hop/>
 
 =head1 THANKS
 
@@ -790,10 +791,6 @@ To avoid my spam filter, please include "Perl", "module", or this
 module's name in the message's subject line, and/or GPG-sign your
 message.
 
-If you have suggestions for improvement, please drop me a line.  If
-you make improvements to this software, I ask that you please send me
-a copy of your changes. Thanks.
-
 =cut
 
 =begin gpg
@@ -801,9 +798,9 @@ a copy of your changes. Thanks.
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (Cygwin)
 
-iD8DBQFDBLz3Y96i4h5M0egRAsCMAKCMEXDo9AsjDJDhGmfOBYRtBUnaMwCgyjg/
-PHLFJpSMY+3qlpBeSY6Y3Oo=
-=ztcv
+iD8DBQFDC5UFY96i4h5M0egRApNiAJ9WwoZql+2DE+RsSA6koGLZPcbQZACfY248
+VoKah+WAFOvk46vOcn+hL9Y=
+=aOws
 -----END PGP SIGNATURE-----
 
 =end gpg
